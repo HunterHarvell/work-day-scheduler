@@ -85,3 +85,23 @@ function local_data(){
 
 
 local_data();
+
+$('.btn').click(function (e) {
+    
+    // prevent default saves
+    e.preventDefault();
+    //gets the value of the text box next to the button that is pressed
+    var text = $(this).parent().prev().val();
+    console.dir('dir',$(this).parent().prev())
+    console.log('text:', text)
+    // creates variable for save buttons using their corresponding IDs
+    var button_id=$(this).attr('id')
+    console.log(button_id, text)
+    
+    // ties the event log to the corresponding text using the button ID
+    event_log[button_id]=text
+    
+    // converts data into a string for JS usage
+    localStorage.setItem('event_log', JSON.stringify(event_log));
+    console.log( text, localStorage)
+});
