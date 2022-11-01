@@ -91,7 +91,7 @@ $('.btn').click(function (e) {
     // prevent default saves
     e.preventDefault();
     //gets the value of the text box next to the button that is pressed
-    var text_in_box = $(this).parent().prev().val();
+    var text_in_box = $(this).siblings('.description').val();
     console.dir('dir',$(this).parent().prev())
     console.log('text_in_box:', text_in_box)
     // creates variable for save buttons using their corresponding IDs
