@@ -1,4 +1,5 @@
 # work-day-scheduler
+This is an application meant to be able to organize your day by hour. Using the power of JQuery, moment.js, and local storage it's able to make the information in the boxes persistent past page loads. 
 
 ## User Story
 AS AN employee with a busy schedule
@@ -21,3 +22,9 @@ WHEN I refresh the page
 THEN the saved events persist
 
 ## Deployed Application
+
+Deployed Application Link: https://hunterharvell.github.io/work-day-scheduler/
+
+My Repository: https://github.com/HunterHarvell/work-day-scheduler.git
+
+![screenshot](./assets/screenshot.png "Screenshot")

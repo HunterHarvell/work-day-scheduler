@@ -68,8 +68,8 @@ function local_data(){
         event_log=JSON.parse(localStorage.getItem('event_log'));
         $('.textarea').each(function (button_id){
 
-                //Places the text from the local storage into their corresponding time slots
-                $(this).val(event_log[button_id]);
+            //Places the text from the local storage into their corresponding time slots
+            $(this).val(event_log[button_id]);
         });
     } else {
         // create a new object called event_log
@@ -91,17 +91,17 @@ $('.btn').click(function (e) {
     // prevent default saves
     e.preventDefault();
     //gets the value of the text box next to the button that is pressed
-    var text = $(this).parent().prev().val();
+    var text_in_box = $(this).parent().prev().val();
     console.dir('dir',$(this).parent().prev())
-    console.log('text:', text)
+    console.log('text_in_box:', text_in_box)
     // creates variable for save buttons using their corresponding IDs
     var button_id=$(this).attr('id')
-    console.log(button_id, text)
+    console.log(button_id, text_in_box)
     
     // ties the event log to the corresponding text using the button ID
-    event_log[button_id]=text
+    event_log[button_id]=text_in_box
     
     // converts data into a string for JS usage
     localStorage.setItem('event_log', JSON.stringify(event_log));
-    console.log( text, localStorage)
+    console.log( text_in_box, localStorage)
 });
